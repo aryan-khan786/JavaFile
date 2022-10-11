@@ -1,0 +1,35 @@
+
+package com.TechnoElevate.Restaurent;
+import java.util.Scanner;
+public class Menu {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+//	int n=sc.nextInt();
+	String st[]= {" ","Mutton Biryani--1","Chicken Biryani--2","Chicken Masala--3","Chicken Tangdi kawab--4"};
+	int ar[]= {0,500,300,280,450};
+	for(int i=0;i<st.length;i++)
+	{
+		System.out.println(st[i]);
+	}
+	int sum=0;
+	System.out.println("How many items you want to order in 1 time ");
+	int n=sc.nextInt();
+	int arr[]=new int[n];
+	String [] str=new String[n];
+	System.out.println("Please press the items number : ");
+	for(int i=0;i<n;i++)
+	{
+		int item=sc.nextInt();
+		sum=sum+ar[item];
+		str[i]=st[item];
+		ar[i]=ar[item];
+		
+	}
+	for(int i=0;i<str.length;i++)
+	{
+		System.out.println(str[i]+ " "+arr[i]);
+	}
+	System.out.println("Total Bill of your order");
+	System.out.println("Thank you for your order");
+}
+}
